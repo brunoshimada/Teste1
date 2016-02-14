@@ -1,0 +1,54 @@
+<!--EDITAR-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TESTE 1</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.icon-large.min.css">
+    <!--<link rel="stylesheet" href="css/main.css">-->
+
+    <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+	<header>
+		<h2>Scripts SQL</h2>
+	</header>
+	<div id = "main">
+		<div id = "content">
+			<blockquote>
+				<p>
+				CREATE TABLE IF NOT EXISTS produto ( </br>
+				id integer not null unique auto_increment, </br>
+				nome varchar (100) not null,</br>
+				descricao varchar (300),</br>
+				preco float,</br>
+				constraint produto_pkey primary key (id)</br>
+				);</br>
+				</p>
+				<p>
+				CREATE TABLE IF NOT EXISTS cliente ( </br>
+				id varchar(11) not null unique,</br>
+				nome varchar (300) not null,</br>
+				email varchar (100),</br>
+				telefone varchar(11),</br>
+				constraint cliente_pkey primary key (id)</br>
+				);</br>
+				</p>
+				<p>
+				CREATE TABLE IF NOT EXISTS pedido ( </br>
+					id_cliente varchar(11) not null references cliente(id) on delete cascade,</br>
+					id_produto integer not null references produto(id) on delete cascade</br>
+				);
+				</p>
+			</blockquote>
+		</div>
+	</div>
+	<div id = "footer">
+		<p>Feito por Shimada</p>
+	</div>
+</body>
+</html>

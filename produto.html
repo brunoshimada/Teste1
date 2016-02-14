@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TESTE 1</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.icon-large.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="text/javascript" src="scripts/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+	<header id = "header" class = "page-header">
+		<h1>PRODUTO <small>C.R.U.D</small> </h1>
+	</header>
+	<div id = "main" class = "container">
+		<div id = "content" class = "container col-md-12">
+		<!--CREATE-->
+			<div id = "create" class = "form-group">
+				<h3>Cadastrar produto</h3>
+				<form method="post" action="php/create_product.php">
+					<p>
+						<label for = "nome_prod">Nome do produto:</label>
+						<input type="text" id="nome_prod" name = "nome_prod" class = "form-control"></input>
+					</p>
+					<p>
+						<label for = "descr_prod">Descrição do produto:</label>
+						<input type="text" id="descr_prod" name = "descr_prod" class = "form-control"></input>
+					</p>
+					<p>
+						<label for = "price_prod">Preço do produto:</label>
+						<input type="text" id="price_prod" name = "price_prod" placeholder="R$" class = "form-control"></input>
+					</p>
+
+					<p><button type = "submit" class="btn btn-default">Cadastrar</button></p>
+				</form>
+			</div>
+		<!--/CREATE-->
+		<hr>
+		<!--READ-->
+			<div id = "retrieve" class = "form-group">
+				<h3>Pesquisa produto</h3>
+				<form method="post" action="php/retrieve_product.php">
+					<p>
+						<label for = "nome_retrieve_prod">Nome do produto:</label>
+						<input type="text" id="nome_retrieve_prod" name = "nome_retrieve_prod" class = "form-control"></input>
+					</p>
+
+					<p><button type = "submit" class="btn btn-default">Pesquisar</button></p>
+				</form>
+			</div>
+		<!--/READ-->
+			<p>
+				<a href="index.html" target="_self">
+					<button class = "btn" type="button">
+					Voltar
+					</button>
+				</a>
+			</p>
+		</div>
+	</div>
+	<footer id = "bottom" class  ="footer">
+		<div class = "container">
+			<p>Feito por Bruno Shimada</p>	
+		</div>
+	</footer>
+</body>
+</html>
